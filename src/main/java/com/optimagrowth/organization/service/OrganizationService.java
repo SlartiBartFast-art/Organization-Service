@@ -3,35 +3,37 @@ package com.optimagrowth.organization.service;
 import java.util.Optional;
 import java.util.UUID;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.Data;
+
 import org.springframework.stereotype.Service;
 
 import com.optimagrowth.organization.model.Organization;
 import com.optimagrowth.organization.repository.OrganizationRepository;
 
+@Data
 @Service
 public class OrganizationService {
 
-    @Autowired
-    private OrganizationRepository repository;
+    private final OrganizationRepository repository;
 
-    public Organization findById(String organizationId) {
+    public Organization findById(Long organizationId) {
         Optional<Organization> opt = repository.findById(organizationId);
         return (opt.isPresent()) ? opt.get() : null;
     }
 
-    public Organization create(Organization organization){
-        organization.setId( UUID.randomUUID().toString());
+    public Organization create(Organization organization) {
+        organization.setId(Long.valueOf(UUID.randomUUID().toString()));
         organization = repository.save(organization);
         return organization;
 
     }
 
-    public void update(Organization organization){
+    public void update(Long organizationId, Organization organization) {
+        organization.setId(organizationId);
         repository.save(organization);
     }
 
-    public void delete(String organizationId){
+    public void delete(Long organizationId) {
         repository.deleteById(organizationId);
     }
 }
