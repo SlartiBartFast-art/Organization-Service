@@ -15,3 +15,6 @@ Application uses REST API architecture
 ![Image of Arch](https://github.com/SlartiBartFast-art/Organization-Service/blob/master/image/Screenshot_2.jpg)
 
 ![Image of Arch](https://github.com/SlartiBartFast-art/Organization-Service/blob/master/image/Screenshot_3.jpg)
+
+registered service instance using Spring Eureka
+![Image of Arch](https://github.com/SlartiBartFast-art/Organization-Service/blob/master/image/Screenshot_4.jpg)
