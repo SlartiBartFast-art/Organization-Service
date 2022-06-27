@@ -17,13 +17,13 @@ public class OrganizationController {
 
     @GetMapping(value = "/{organizationId}")
     public ResponseEntity<Organization> getOrganization(
-            @PathVariable("organizationId") Long organizationId) {
+            @PathVariable("organizationId") String organizationId) {
         return ResponseEntity.ok(service.findById(organizationId));
     }
 
     @PutMapping(value = "/{organizationId}")
     public void updateOrganization(
-            @PathVariable("organizationId") Long organizationId,
+            @PathVariable("organizationId") String organizationId,
             @RequestBody Organization organization) {
         service.update(organizationId, organization);
     }
@@ -38,7 +38,7 @@ public class OrganizationController {
      * @param organizationId
      */
     @DeleteMapping(value = "/{organizationId}")
-    public void deleteOrganization(@PathVariable("organizationId") Long organizationId) {
+    public void deleteOrganization(@PathVariable("organizationId") String organizationId) {
         service.delete(organizationId);
     }
 }
