@@ -18,3 +18,14 @@ Application uses REST API architecture
 
 registered service instance using Spring Eureka
 ![Image of Arch](https://github.com/SlartiBartFast-art/Organization-Service/blob/master/image/Screenshot_4.jpg)
+
+
+GET
+
+        http://localhost:8081/v1/organization/optimaGrowth
+
+![Image of Arch](https://github.com/SlartiBartFast-art/Organization-Service/blob/master/image/Screenshot_5.jpg)
+
+service gateway - correlation identifier
+
+![Image of Arch](https://github.com/SlartiBartFast-art/Organization-Service/blob/master/image/Screenshot_6.jpg)
